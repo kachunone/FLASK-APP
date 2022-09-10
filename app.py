@@ -19,7 +19,7 @@ def recommender(input_array):
 
 @app.route("/test")
 def home():
-    return 
+    return "you reached me!"
 
 @app.route("/search")
 def search():
