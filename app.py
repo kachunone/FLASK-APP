@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 app = Flask(__name__)
 
 @app.route("/test")
@@ -7,7 +7,8 @@ def home():
 
 @app.route("/search")
 def search():
-    return "This is a json format result"
+    problemType = request.args.get('type')
+    return problemType;
 
 if __name__ == '__main__':
     app.run()
